@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  namespace: todo-app
   name: frontend-pod 
   labels:
     app: frontend-pod
 spec:
   containers:
     - name: frontend-pod
-      image: umarkhan803/todo-frontend
+      image: umarkhan803/todo-frontend:latest 
       imagePullPolicy: Never
       ports:
         - containerPort: 80

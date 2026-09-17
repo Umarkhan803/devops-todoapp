@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  namespace: todo-app
   name: backend-pod 
   labels:
     app: backend-pod
-spec: 
+spec:       
   containers:
     - name: backend-pod
-      image: umarkhan803/todo-backend
+      image: umarkhan803/todo-backend:latest
       ports:
         - containerPort: 5000
           name: backend 
